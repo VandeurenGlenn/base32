@@ -1,0 +1,30 @@
+{
+  "name": "@vandeurenglenn/base32",
+  "version": "1.0.0",
+  "description": "Base32",
+  "keywords": [
+    "base",
+    "32",
+    "base32",
+    "bs32"
+  ],
+  "license": "MIT",
+  "repository": "git://github.com/vandeurenglenn/base32.git",
+  "homepage": "https://github.com/vandeurenglenn/base32",
+  "bugs": {
+    "url": "https://github.com/vandeurenglenn/base32/issues"
+  },
+  "author": "Vanduren Glenn <vandeurenglenn@gmail.com>",
+  "main": "./dist/base32.js",
+  "module": "./src/base32.js",
+  "scripts": {
+    "c": "rollup -c",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "@vandeurenglenn/base-x": "^1.0.0"
+  },
+  "devDependencies": {
+    "rollup": "^2.70.2"
+  }
+}
