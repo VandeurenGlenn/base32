@@ -8,6 +8,9 @@ const base32HexEncoded = base32.encode(uint8Array, true)
 console.log(base32Encoded)
 console.log(base32HexEncoded)
 
+console.log(base32.isBase32(base32Encoded))
+console.log(base32.isBase32(base32HexEncoded, true))
+
 const base32Decoded = base32.decode(base32Encoded)
 const base32HexDecoded = base32.decode(base32HexEncoded, true)
 
