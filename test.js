@@ -1,4 +1,4 @@
-const base32 = require('./dist/base32');
+import base32 from './dist/base32.js'
 
 const uint8Array = new TextEncoder().encode('hi')
 

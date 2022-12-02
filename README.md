@@ -5,8 +5,6 @@ module compatible base32
 ## Usage
 
 ``` js
-const base32 = require('@vandeurenglenn/base32')
-// or
 import base32 from '@vandeurenglenn/base32'
 
 const uint8Array = new TextEncoder().encode('hi')

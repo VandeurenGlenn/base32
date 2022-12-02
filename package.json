@@ -16,15 +16,17 @@
   },
   "author": "Vanduren Glenn <vandeurenglenn@gmail.com>",
   "main": "./dist/base32.js",
-  "module": "./src/base32.js",
+  "type": "module",
   "scripts": {
-    "c": "rollup -c",
+    "build": "rollup -c",
     "test": "node test.js"
   },
   "dependencies": {
-    "@vandeurenglenn/base-x": "^1.0.0"
+    "@vandeurenglenn/base-x": "^1.1.0"
   },
   "devDependencies": {
-    "rollup": "^2.70.2"
+    "@rollup/plugin-typescript": "^10.0.1",
+    "rollup": "^2.70.2",
+    "tslib": "^2.4.1"
   }
 }
