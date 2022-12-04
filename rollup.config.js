@@ -6,7 +6,14 @@ export default [{
     dir: './dist',
     format: 'es'
   }],
+  external: [
+    '@vandeurenglenn/base-x'
+  ],
   plugins: [
-    typescript()
+    typescript({
+      "compilerOptions": {
+        "target": "es2022"
+      }
+    })
   ]
 }]

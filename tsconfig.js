@@ -1,15 +1,11 @@
 export default {
-  
-  "esModuleInterop": true,
-  'allowSyntheticDefaultImports': true,
   "compilerOptions": {
-      "outDir": "./dist",
-      "esModuleInterop": true,
-      'allowSyntheticDefaultImports': true,
-      "allowJs": true,
-      "target": "latest"
+    "outDir": "./dist",
+    "allowJs": true,
+    "target": "latest"
   },
-      "include": [
-      "./src/**/*"
+  "include": [
+    "./src/**/*",
+    ".types/**/*"
   ]
 }
