@@ -1,7 +1,17 @@
 import baseX from '@vandeurenglenn/base-x'
 
-const ALPHABET = 'abcdefghijklmnopqrstuvwxyz234567'
-const ALPHABET_HEX = '0123456789abcdefghijklmnopqrstuv'
+/**
+ * A base32 string only contains 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567'
+ */
+type base32String  = string
+
+/**
+ * A base32 string only contains 'ABCDEFGHIJKLMNOPQRSTUV234567'
+ */
+type base32HexString  = string
+
+const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567'
+const ALPHABET_HEX = '0123456789ABCDEFGHIJKLMNOPQRSTUV'
 
 const base32 = baseX(ALPHABET)
 const base32Hex = baseX(ALPHABET_HEX)

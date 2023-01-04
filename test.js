@@ -1,4 +1,4 @@
-import base32 from './dist/base32.js'
+import base32 from './index.js'
 import test from 'tape'
 
 const uint8Array = new TextEncoder().encode('hi')

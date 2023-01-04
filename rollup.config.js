@@ -1,9 +1,9 @@
 import typescript from '@rollup/plugin-typescript';
 
 export default [{
-  input: ['./src/base32.ts'],
+  input: ['./src/index.ts'],
   output: [{
-    dir: './dist',
+    dir: './',
     format: 'es'
   }],
   external: [
@@ -12,8 +12,13 @@ export default [{
   plugins: [
     typescript({
       "compilerOptions": {
-        "target": "es2022"
-      }
+        "allowJs": true,
+        "target": "es2022",
+        "declaration": true,
+        "declarationDir": './'
+      },
+      include: ['./src/**'],
+      exclude: ['./node_modules']
     })
   ]
 }]
