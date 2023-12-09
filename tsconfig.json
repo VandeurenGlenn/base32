@@ -2,9 +2,10 @@
   "compilerOptions": {
     "outDir": "./",
     "allowJs": true,
-    "target": "es2022",
+    "target": "ESNext",
     "declaration": true,
-    "moduleResolution": "nodenext"
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext"
   },
   "include": ["./src/*.ts"],
   "exclude": ["./node_modules"]

@@ -1,7 +1,7 @@
 import baseX from '@vandeurenglenn/base-x';
 
-const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
-const ALPHABET_HEX = '0123456789ABCDEFGHIJKLMNOPQRSTUV';
+const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
+const ALPHABET_HEX = "0123456789ABCDEFGHIJKLMNOPQRSTUV";
 const base32 = baseX(ALPHABET);
 const base32Hex = baseX(ALPHABET_HEX);
 const decode = base32.decode;
@@ -29,7 +29,7 @@ var index = {
     encodeHex,
     decodeHex,
     isBase32,
-    isBase32Hex
+    isBase32Hex,
 };
 
 export { decode, decodeHex, index as default, encode, encodeHex, isBase32, isBase32Hex };
