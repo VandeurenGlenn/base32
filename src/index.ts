@@ -25,13 +25,20 @@ export const encode = base32.encode;
 export const encodeHex = base32Hex.encode;
 
 export const isBase32 = (string: base32String, hex = false): boolean => {
-  try {
-    if (hex) decodeHex(string);
-    else decode(string);
-    return true;
-  } catch (e) {
-    return false;
+  if (typeof string !== "string") return false;
+
+  for (let i = 0; i < string.length; i++) {
+    const character = string.charCodeAt(i);
+    if (
+      hex
+        ? !((character >= 48 && character <= 57) || (character >= 65 && character <= 86))
+        : !((character >= 65 && character <= 90) || (character >= 50 && character <= 55))
+    ) {
+      return false;
+    }
   }
+
+  return true;
 };
 
 export const isBase32Hex = (string: base32HexString): boolean => {

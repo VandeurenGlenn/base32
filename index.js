@@ -1,29 +1,29 @@
-import baseX from '@vandeurenglenn/base-x';
-
+import baseX from "@vandeurenglenn/base-x";
 const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
 const ALPHABET_HEX = "0123456789ABCDEFGHIJKLMNOPQRSTUV";
 const base32 = baseX(ALPHABET);
 const base32Hex = baseX(ALPHABET_HEX);
-const decode = base32.decode;
-const decodeHex = base32Hex.decode;
-const encode = base32.encode;
-const encodeHex = base32Hex.encode;
-const isBase32 = (string, hex = false) => {
-    try {
-        if (hex)
-            decodeHex(string);
-        else
-            decode(string);
-        return true;
-    }
-    catch (e) {
+export const decode = base32.decode;
+export const decodeHex = base32Hex.decode;
+export const encode = base32.encode;
+export const encodeHex = base32Hex.encode;
+export const isBase32 = (string, hex = false) => {
+    if (typeof string !== "string")
         return false;
+    for (let i = 0; i < string.length; i++) {
+        const character = string.charCodeAt(i);
+        if (hex
+            ? !((character >= 48 && character <= 57) || (character >= 65 && character <= 86))
+            : !((character >= 65 && character <= 90) || (character >= 50 && character <= 55))) {
+            return false;
+        }
     }
+    return true;
 };
-const isBase32Hex = (string) => {
+export const isBase32Hex = (string) => {
     return isBase32(string, true);
 };
-var index = {
+export default {
     encode,
     decode,
     encodeHex,
@@ -31,5 +31,3 @@ var index = {
     isBase32,
     isBase32Hex,
 };
-
-export { decode, decodeHex, index as default, encode, encodeHex, isBase32, isBase32Hex };

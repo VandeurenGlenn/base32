@@ -23,16 +23,13 @@
   },
   "type": "module",
   "scripts": {
-    "build": "rollup -c",
+    "build": "npx typescript",
     "test": "node test.js"
   },
   "dependencies": {
-    "@vandeurenglenn/base-x": "^1.1.0"
+    "@vandeurenglenn/base-x": "^1.2.2"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^10.0.1",
-    "rollup": "^2.70.2",
-    "tape": "^5.6.1",
-    "tslib": "^2.4.1"
+    "typescript": "^7.0.2"
   }
 }

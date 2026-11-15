@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./",
+    "rootDir": "./src",
     "allowJs": true,
     "target": "ESNext",
     "declaration": true,
